@@ -1,6 +1,6 @@
-package org.example.config;
+package org.emma.config;
 
-import org.example.entities.Employe;
+import org.emma.entities.Employe;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;

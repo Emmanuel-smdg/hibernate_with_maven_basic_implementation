@@ -1,8 +1,8 @@
-package org.example;
+package org.emma;
 
-import org.example.Service.EmployeService;
-import org.example.Service.EmployeServiceImpl;
-import org.example.entities.Employe;
+import org.emma.Service.EmployeService;
+import org.emma.Service.EmployeServiceImpl;
+import org.emma.entities.Employe;
 
 import java.util.List;
 import java.util.UUID;
@@ -20,16 +20,18 @@ public class App
                         " and their dependencies for you!" );
         EmployeService employeService = new EmployeServiceImpl();
 
-        Employe employe = new Employe();
+ /*       Employe employe = new Employe();
         employe.setId(UUID.randomUUID().toString());
-        employe.setNom("ETest");
-        employe.setPrenom("EPTest");
-        employe = employeService.Save(employe);
+        employe.setNom("Kabore");
+        employe.setPrenom("Marc");
+        employe = employeService.Save(employe);*/
+
         List<Employe> all = employeService.findAll();
         for (Employe emp : all
              ) {
             System.out.println(emp.getPrenom());
         }
+        //employeService.Delete("e68ba082-5e73-4031-b596-d0a8019319ac");
 
     }
 }

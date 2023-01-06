@@ -1,6 +1,6 @@
-package org.example.Service;
+package org.emma.Service;
 
-import org.example.entities.Employe;
+import org.emma.entities.Employe;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
-package org.example.Service;
+package org.emma.Service;
 
-import org.example.config.HibernateUtil;
-import org.example.entities.Employe;
+import org.emma.config.HibernateUtil;
+import org.emma.entities.Employe;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -33,7 +33,7 @@ public class EmployeServiceImpl implements EmployeService{
      * @return
      */
     public Employe findById(String id) {
-        return session.get(Employe.class, id);
+        return session.find(Employe.class, id);
     }
 
     /**
@@ -54,7 +54,7 @@ public class EmployeServiceImpl implements EmployeService{
     public void Delete(String id) {
         transaction = session.beginTransaction();
         //session.delete(session.get(Employe.class, id));
-        session.remove(session.get(Employe.class, id));
+        session.remove(session.find(Employe.class, id));
         transaction.commit();
     }
 
