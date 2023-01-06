@@ -9,12 +9,14 @@ import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import org.hibernate.Hibernate;
 
+import java.io.Serializable;
+
 @Entity
 @RequiredArgsConstructor
 @Getter
 @Setter
 @Table(name = "Employe")
-public class Employe {
+public class Employe implements Serializable {
     @Id
     @Column(name = "id_Employe")
     private String id;
